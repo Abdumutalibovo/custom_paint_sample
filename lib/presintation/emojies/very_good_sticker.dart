@@ -7,20 +7,11 @@ class VeryGoodSticker extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        title: Text(
-          "Smile 1",
-          style: TextStyle(color: Colors.black),
-        ),
-        centerTitle: true,
-        elevation: 0,
-        backgroundColor: Colors.white,
-      ),
       body: Center(
         child: Container(
           color: Colors.white,
           child: CustomPaint(
-            size: const Size(300, 300),
+            size: const Size(200, 200),
             painter: MyPainter(),
           ),
         ),
@@ -37,7 +28,7 @@ class MyPainter extends CustomPainter {
       ..color = Colors.green
       ..style = PaintingStyle.stroke
       ..strokeCap=StrokeCap.round
-      ..strokeWidth = 10;
+      ..strokeWidth = 5;
 
     var eyesPaint=Paint()
     ..color=Colors.green
@@ -51,8 +42,8 @@ class MyPainter extends CustomPainter {
 
     canvas.drawArc(Rect.fromCenter(center: center, width: radius, height: radius), 0, pi, false, paint);
 
-    canvas.drawCircle(Offset(center.dx-radius/3,center.dy-radius/3), 15, eyesPaint);
-    canvas.drawCircle(Offset(center.dx-radius/3+100,center.dy-radius/3), 15, eyesPaint);
+    canvas.drawCircle(Offset(center.dx-radius/3,center.dy-radius/3), 10, eyesPaint);
+    canvas.drawCircle(Offset(center.dx-radius/3+60,center.dy-radius/3), 10, eyesPaint);
   }
 
   @override

@@ -6,6 +6,7 @@ class BadSticker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Center(
           child: Column(
@@ -19,7 +20,7 @@ class BadSticker extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 50,),
-              Text("O'rtacha",style: TextStyle(fontSize: 26),)
+              Text("Yomon",style: TextStyle(fontSize: 26),)
             ],
           ),
         ),
